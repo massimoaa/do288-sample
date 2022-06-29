@@ -27,4 +27,4 @@ patches:
     metadata:
       name: webserver
     spec:
-      host: stage-prod.apps.eu46a.prod.ole.redhat.com
+      host: stage-prod.apps.ocp4.example.com
