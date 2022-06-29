@@ -1,0 +1,35 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: webserver
+  labels:
+    app: webserver
+spec:
+  selector:
+    matchLabels:
+      app: webserver
+  replicas: 1
+  template:
+    metadata:
+      name: webserver
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: webserver
+        image: quay.io/danielstraub/webserver
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        volumeMounts:
+        - name: webserver-env
+          mountPath: /tmp/env.properties
+          subPath: env.properties
+      volumes:
+      - name: webserver-env
+        configMap:
+          name: webserver
+#          items:
+#          - key: env.properties
+#            path: env.properties

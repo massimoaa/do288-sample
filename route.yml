@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: webserver
+  labels:
+    app: webserver
+spec:
+  to:
+    name: webserver
+  host: do288-sample.apps.eu46a.prod.ole.redhat.com
+  port:
+    targetPort: http
+  tls:
+    termination: edge   
+

@@ -1,0 +1,12 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: webserver
+  labels:
+    app: webserver
+data:
+  env.properties: |
+    # this file contains properties
+    foo=bar 
+    boom=bang
+
