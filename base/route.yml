@@ -5,6 +5,7 @@ metadata:
 spec:
   to:
     name: webserver
+    kind: Service
   host: dummy
   port:
     targetPort: http
