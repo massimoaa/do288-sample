@@ -2,11 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: webserver
-  labels:
-    app: webserver
 spec:
-  selector:
-    app: webserver
   ports:
   - name: http
     port: 80
