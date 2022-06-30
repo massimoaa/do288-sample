@@ -16,7 +16,7 @@ spec:
           protocol: TCP
         volumeMounts:
         - name: webserver-env
-          mountPath: /tmp/env.properties
+          mountPath: /usr/share/nginx/html/env.properties
           subPath: env.properties
       volumes:
       - name: webserver-env
