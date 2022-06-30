@@ -13,5 +13,8 @@ spec:
     repoURL: https://github.com/dstraub/do288-sample.git
     targetRevision: HEAD
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
+
 
