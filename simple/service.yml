@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webserver
+  namespace: do180
+  labels:
+    app: webserver
+spec:
+  selector:
+    app: webserver
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: http
